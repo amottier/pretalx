@@ -185,6 +185,8 @@ export default {
 }
 </script>
 <style lang="stylus">
+#page-content
+	padding: 0
 .pretalx-schedule
 	display: flex
 	flex-direction: column
@@ -193,6 +195,7 @@ export default {
 	height: 100vh
 	width: 100%
 	font-size: 14px
+	margin-left: 24px
 	&.is-dragging
 		user-select: none
 		cursor: grabbing
