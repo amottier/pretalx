@@ -5,10 +5,10 @@
   "author": "",
   "scripts": {
     "start": "vite",
-    "build": "vue-cli-service build",
-    "build:lib": "VUE_CLI_SERVICE_CONFIG_PATH=./vue.config.lib.js vue-cli-service build --target lib --formats commonjs src/lib.js",
-    "build:wc": "npx vue-cli-service build --target wc --inline-vue --name pretalx-schedule-editor src/App.vue",
-    "lint": "vue-cli-service lint",
+    "build": "vite build",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:eslint": "eslint . --ext .js,.vue",
+    "lint:stylelint": "stylelint \"**/*.{styl,vue}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "analyze": "ANALYZE=true npm run build",
     "prepublishOnly": "npm run build:lib"
@@ -26,7 +26,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
+    "eslint": "^8.20.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "eslint-plugin-vue-pug": "^0.5.4",
     "pug": "^3.0.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-plugin-stylus": "^0.16.1",
     "stylus": "^0.54.7",
     "vite": "^3.0.2"
   },
