@@ -27,10 +27,10 @@
 import Vue from 'vue'
 import Buntpapier from 'buntpapier'
 import moment from 'moment-timezone'
-import Editor from 'components/Editor'
-import GridSchedule from 'components/GridSchedule'
-import Session from 'components/Session'
-import api from 'api'
+import Editor from '~/components/Editor'
+import GridSchedule from '~/components/GridSchedule'
+import Session from '~/components/Session'
+import api from '~/api'
 
 Vue.use(Buntpapier)
 
@@ -226,7 +226,6 @@ export default {
 }
 </script>
 <style lang="stylus">
-@import 'styles/global.styl'
 .pretalx-schedule
 	display: flex
 	flex-direction: column
