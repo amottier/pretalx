@@ -30,16 +30,10 @@ export default {
 	components: { Editor, GridSchedule, Session },
 	props: {
 		eventUrl: String,
-		apiToken: String,
 		locale: String,
 		version: {
 			type: String,
 			default: ''
-		}
-	},
-	provide () {
-		return {
-			eventUrl: this.eventUrl
 		}
 	},
 	data () {
