@@ -3,7 +3,6 @@ from urllib.parse import unquote
 
 import pytz
 from django.conf import settings
-from django.db.models import Q
 from django.http import Http404, HttpResponse, JsonResponse
 from django.utils.timezone import now
 from django.views.decorators.cache import cache_page

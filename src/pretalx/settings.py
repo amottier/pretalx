@@ -520,6 +520,9 @@ STATICFILES_DIRS = [static_path] if static_path.exists() else []
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+if DEBUG:
+    JS_DEV_SERVER = "http://localhost:8080"
+
 
 ## EXTERNAL APP SETTINGS
 with suppress(ImportError):
