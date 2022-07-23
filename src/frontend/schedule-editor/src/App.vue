@@ -24,15 +24,11 @@
 	bunt-progress-circular(v-else, size="huge", :page="true")
 </template>
 <script>
-import Vue from 'vue'
-import Buntpapier from 'buntpapier'
 import moment from 'moment-timezone'
 import Editor from '~/components/Editor'
 import GridSchedule from '~/components/GridSchedule'
 import Session from '~/components/Session'
 import api from '~/api'
-
-Vue.use(Buntpapier)
 
 export default {
 	name: 'PretalxSchedule',

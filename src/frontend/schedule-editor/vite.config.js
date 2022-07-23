@@ -1,6 +1,6 @@
 import path from 'path'
+import vue from '@vitejs/plugin-vue'
 import BuntpapierStylus from 'buntpapier/stylus.js'
-import { createVuePlugin } from 'vite-plugin-vue2'
 
 const stylusOptions = {
 	paths: [
@@ -14,7 +14,7 @@ const stylusOptions = {
 
 export default {
 	plugins: [
-	  createVuePlugin(/* options */)
+		vue()
 	],
 	css: {
 		preprocessorOptions: {

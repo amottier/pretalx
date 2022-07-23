@@ -1,13 +1,11 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import Buntpapier from 'buntpapier'
+
 import App from './App.vue'
 import '~/styles/global.styl'
 
-Vue.config.productionTip = false
-
-new Vue({
-	render: h => h(App, {
-		props: {
-			locale: 'en-ie'
-		}
-	})
-}).$mount('#app')
+const app = createApp(App, {
+	locale: 'en-ie'
+})
+app.use(Buntpapier)
+app.mount('#app')
