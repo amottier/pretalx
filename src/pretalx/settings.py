@@ -520,8 +520,10 @@ STATICFILES_DIRS = [static_path] if static_path.exists() else []
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-if DEBUG:
-    JS_DEV_SERVER = "http://localhost:8080"
+VITE_DEV_SERVER_PORT = 8080
+VITE_DEV_SERVER = f"http://127.0.0.1:{VITE_DEV_SERVER_PORT}"
+VITE_DEV_MODE = DEBUG
+_VITE_IGNORE = False  # Used to ignore `collectstatic`/`rebuild`
 
 
 ## EXTERNAL APP SETTINGS
